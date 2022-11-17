@@ -1,4 +1,6 @@
 #application.yml or application.properties used to bind external properties into an application at runtime
+server:
+  port: 8181
 
 twitter-to-kafka-service:
   twitter-keywords:
