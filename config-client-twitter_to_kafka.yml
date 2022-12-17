@@ -1,21 +1,19 @@
 #application.yml or application.properties used to bind external properties into an application at runtime
+server:
+  port: 8181
 
 twitter-to-kafka-service:
-  twitterKeywords:
+  twitter-keywords:
     - Java
     - Microservices
     - Spring
     - Kafka
     - Elasticsearch
-  welcomeMessage : Hello There
-  enable-v2-tweets: false
+  welcome-message: Hello microservices!
   enable-mock-tweets: true
   mock-min-tweet-length: 5
   mock-max-tweet-length: 15
-  mock-sleep-ms: 1000
-  twitter-v2-base-url: https://api.twitter.com/2/tweets/search/stream?tweet.fields=created_at&expansions=author_id
-  twitter-v2-rules-base-url: https://api.twitter.com/2/tweets/search/stream/rules
-  twitter-v2-bearer-token: ${TWITTER_BEARER_TOKEN}
+  mock-sleep-ms: 10000
 
 retry-config:
   initial-interval-ms: 1000
